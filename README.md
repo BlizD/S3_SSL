@@ -2,7 +2,7 @@
 
 Расширение для БСП для хранения файлов на s3 (minio, Amazon S3, Mail.Ru Cloud и т.п.)
 
-Разработано совместно с [@zotov](https://github.com/zotov)
+Разработано совместно с [@zotov-vs](https://github.com/zotov-vs)
 
 Версия БСП: 3.1.2.343
 
