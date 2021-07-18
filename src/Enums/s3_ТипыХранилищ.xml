@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Enum uuid="713001d8-7f14-4336-bbee-0fda8ae088fd">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.s3_ТипыХранилищ" category="Ref">
+				<xr:TypeId>81b100db-619a-4fc3-af81-50d15d881ce9</xr:TypeId>
+				<xr:ValueId>090ed2b1-30c7-485f-8029-2a13ab4a5355</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.s3_ТипыХранилищ" category="Manager">
+				<xr:TypeId>39f2ff3d-2349-4907-b9ab-df2f3bf66ea1</xr:TypeId>
+				<xr:ValueId>38f19d0e-409e-49b1-94b8-c70883ee8ddd</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.s3_ТипыХранилищ" category="List">
+				<xr:TypeId>b0e811b4-e8bd-4051-8ea5-ee07f03b95e8</xr:TypeId>
+				<xr:ValueId>a149e1a2-5232-4647-af14-4cd681c37271</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>s3_ТипыХранилищ</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы хранилищ</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>// + #s3 Иванов А.Б. 12.01.2021</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="c3e6a278-37f0-44eb-a2cf-ea1e7403c81e">
+				<Properties>
+					<Name>СетеваяПапка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сетевая папка</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="dcc9769e-70a9-421d-886e-2321143f2580">
+				<Properties>
+					<Name>ОбъектноеS3</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объектное s3</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

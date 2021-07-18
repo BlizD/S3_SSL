@@ -1,0 +1,1025 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Width>60</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПроверитьЦелостностьТома" id="84">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьЦелостностьТомаРасширеннаяПодсказка" id="85"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">s3_ПриСозданииНаСервереПосле</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКодИНаименование" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование тома</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа код и наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаКодИНаименованиеExtendedTooltip" id="38"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>true</HorizontalStretch>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="39"/>
+				</InputField>
+				<InputField name="Родитель" id="25">
+					<DataPath>Объект.Parent</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входит в группу</v8:content>
+						</v8:item>
+					</Title>
+					<MaxWidth>30</MaxWidth>
+					<ContextMenu name="РодительКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="РодительExtendedTooltip" id="41"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<RadioButtonField name="s3_ТипХранилища" id="90">
+			<DataPath>Объект.s3_ТипХранилища</DataPath>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сетевая папка</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.s3_ТипыХранилищ.EnumValue.СетеваяПапка</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>S3-хранилище</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.s3_ТипыХранилищ.EnumValue.ОбъектноеS3</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="s3_ТипХранилищаКонтекстноеМеню" id="91"/>
+			<ExtendedTooltip name="s3_ТипХранилищаРасширеннаяПодсказка" id="92"/>
+			<Events>
+				<Event name="OnChange" callType="After">s3_ТипХранилищаПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<Pages name="s3_СтраницыНастроек" id="119">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>S3 страницы настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>S3 страницы настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="s3_СтраницыНастроекРасширеннаяПодсказка" id="120"/>
+			<ChildItems>
+				<Page name="s3_Страница_СетеваяПапка" id="121">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сетевая папка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>S3 страница сетевая папка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="s3_Страница_СетеваяПапкаРасширеннаяПодсказка" id="122"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПути" id="11">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Полный путь</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пути</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПутиExtendedTooltip" id="42"/>
+							<ChildItems>
+								<UsualGroup name="ПутьWindowsСИконкой" id="68">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Путь windows с иконкой</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Путь windows с иконкой</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ПутьWindowsСИконкойРасширеннаяПодсказка" id="69"/>
+									<ChildItems>
+										<PictureDecoration name="ИконкаWindows" id="70">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Иконка windows</v8:content>
+												</v8:item>
+											</Title>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ИконкаWindowsКонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="ИконкаWindowsРасширеннаяПодсказка" id="72"/>
+										</PictureDecoration>
+										<LabelDecoration name="ДекорацияWindows" id="73">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для сервера 1С:Предприятия под управлением Microsoft Windows, (вида "\\servername\resource")</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияWindowsКонтекстноеМеню" id="74"/>
+											<ExtendedTooltip name="ДекорацияWindowsРасширеннаяПодсказка" id="75"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ПолныйПутьWindows" id="5">
+									<DataPath>Объект.ПолныйПутьWindows</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для сервера 1С:Предприятия под управлением Microsoft Windows, (вида "\\servername\resource")</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Меняя путь тома, вы потеряете возможность доступа к уже созданным на этом томе файлам</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>false</ChoiceButton>
+									<ContextMenu name="ПолныйПутьWindowsКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="ПолныйПутьWindowsExtendedTooltip" id="43"/>
+								</InputField>
+								<UsualGroup name="ПутьLinuxСИконкой" id="76">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Путь linux с иконкой</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Путь windows с иконкой</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ПутьLinuxСИконкойРасширеннаяПодсказка" id="77"/>
+									<ChildItems>
+										<PictureDecoration name="ИконкаLinux" id="78">
+											<Width>2</Width>
+											<Height>1</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ИконкаLinuxКонтекстноеМеню" id="79"/>
+											<ExtendedTooltip name="ИконкаLinuxРасширеннаяПодсказка" id="80"/>
+										</PictureDecoration>
+										<LabelDecoration name="ДекорацияLinux" id="81">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для сервера 1С:Предприятия под управлением Linux</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияLinuxКонтекстноеМеню" id="82"/>
+											<ExtendedTooltip name="ДекорацияLinuxРасширеннаяПодсказка" id="83"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ПолныйПутьLinux" id="23">
+									<DataPath>Объект.ПолныйПутьLinux</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для сервера 1С:Предприятия под управлением Linux</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ПолныйПутьLinuxКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ПолныйПутьLinuxExtendedTooltip" id="44"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="s3_Страница_ОбъектноеS3" id="123">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>S3-хранилище</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>S3 страница объектное s3</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="s3_Страница_ОбъектноеS3РасширеннаяПодсказка" id="124"/>
+					<ChildItems>
+						<CheckBoxField name="s3_РазрешеноИзменениеНастроекХранилищаS3" id="116">
+							<DataPath>s3_РазрешеноИзменениеНастроекХранилищаS3</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Укажите Да, чтобы стали доступны реквизиты настроек хранилища s3</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Нет; БИ=Да</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="s3_РазрешеноИзменениеНастроекХранилищаS3КонтекстноеМеню" id="117"/>
+							<ExtendedTooltip name="s3_РазрешеноИзменениеНастроекХранилищаS3РасширеннаяПодсказка" id="118"/>
+							<Events>
+								<Event name="OnChange" callType="After">s3_РазрешеноИзменениеНастроекХранилищаS3ПриИзмененииПосле</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="s3_ГруппаНастройкиОбъектноеS3" id="93">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки хранилища s3</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>S3 группа настройки объектное s3</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="s3_ГруппаНастройкиОбъектноеS3РасширеннаяПодсказка" id="94"/>
+							<ChildItems>
+								<InputField name="s3_АдресХранилища" id="110">
+									<DataPath>Объект.s3_АдресХранилища</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="s3_АдресХранилищаКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="s3_АдресХранилищаРасширеннаяПодсказка" id="112"/>
+									<Events>
+										<Event name="OnChange" callType="After">s3_s3_АдресХранилищаПриИзмененииПосле</Event>
+									</Events>
+								</InputField>
+								<InputField name="s3_ИмяПрефикса" id="98">
+									<DataPath>Объект.s3_ИмяПрефикса</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="s3_ИмяПрефиксаКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="s3_ИмяПрефиксаРасширеннаяПодсказка" id="100"/>
+									<Events>
+										<Event name="OnChange" callType="After">s3_ИмяПрефиксаПриИзмененииПосле</Event>
+									</Events>
+								</InputField>
+								<InputField name="s3_ИмяПрефиксаРабочаяБаза" id="113">
+									<DataPath>Объект.s3_ИмяПрефиксаРабочаяБаза</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="s3_ИмяПрефиксаРабочаяБазаКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="s3_ИмяПрефиксаРабочаяБазаРасширеннаяПодсказка" id="115"/>
+								</InputField>
+								<InputField name="s3_Регион" id="107">
+									<DataPath>Объект.s3_Регион</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="s3_РегионКонтекстноеМеню" id="108"/>
+									<ExtendedTooltip name="s3_РегионРасширеннаяПодсказка" id="109"/>
+								</InputField>
+								<InputField name="s3_ИдентификаторКлючаДоступа" id="101">
+									<DataPath>Объект.s3_ИдентификаторКлючаДоступа</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="s3_ИдентификаторКлючаДоступаКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="s3_ИдентификаторКлючаДоступаРасширеннаяПодсказка" id="103"/>
+								</InputField>
+								<InputField name="s3_СекретныйКлюч" id="104">
+									<DataPath>Объект.s3_СекретныйКлюч</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="s3_СекретныйКлючКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="s3_СекретныйКлючРасширеннаяПодсказка" id="106"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаДополнительно" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дополнительно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="65"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаМаксимальныйРазмер" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа максимальный размер</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа максимальный размер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаМаксимальныйРазмерExtendedTooltip" id="46"/>
+					<ChildItems>
+						<InputField name="МаксимальныйРазмер" id="17">
+							<DataPath>Объект.МаксимальныйРазмер</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Максимальный размер, Мб</v8:content>
+								</v8:item>
+							</Title>
+							<Width>12</Width>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="МаксимальныйРазмерКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="МаксимальныйРазмерExtendedTooltip" id="47"/>
+						</InputField>
+						<InputField name="Порядок" id="7">
+							<DataPath>Объект.ПорядокЗаполнения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="ПорядокКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПорядокExtendedTooltip" id="45"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТекущий" id="86">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа текущий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа текущий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТекущийРасширеннаяПодсказка" id="87"/>
+					<ChildItems>
+						<InputField name="ТекущийРазмер" id="20">
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ТекущийРазмерКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ТекущийРазмерExtendedTooltip" id="48"/>
+						</InputField>
+						<Button name="ОбновитьРазмер" id="88">
+							<Type>UsualButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ОбновитьРазмерРасширеннаяПодсказка" id="89"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Комментарий" id="13">
+			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<Height>2</Height>
+			<VerticalStretch>false</VerticalStretch>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="49"/>
+		</InputField>
+		<UsualGroup name="ГруппаПравила" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа правила</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПравилаРасширеннаяПодсказка" id="67"/>
+			<ChildItems>
+				<Table name="ТаблицаПравил" id="27">
+					<Representation>List</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<HeightInTableRows>1</HeightInTableRows>
+					<RowSelectionMode>Row</RowSelectionMode>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правила</v8:content>
+						</v8:item>
+					</Title>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаПравилКонтекстноеМеню" id="28"/>
+					<AutoCommandBar name="ТаблицаПравилКоманднаяПанель" id="29">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаПравилExtendedTooltip" id="50"/>
+					<SearchStringAddition name="ТаблицаПравилСтрокаПоиска" id="55">
+						<AdditionSource>
+							<Item>ТаблицаПравил</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаПравилСтрокаПоискаКонтекстноеМеню" id="56"/>
+						<ExtendedTooltip name="ТаблицаПравилСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаПравилСостояниеПросмотра" id="58">
+						<AdditionSource>
+							<Item>ТаблицаПравил</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаПравилСостояниеПросмотраКонтекстноеМеню" id="59"/>
+						<ExtendedTooltip name="ТаблицаПравилСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаПравилУправлениеПоиском" id="61">
+						<AdditionSource>
+							<Item>ТаблицаПравил</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаПравилУправлениеПоискомКонтекстноеМеню" id="62"/>
+						<ExtendedTooltip name="ТаблицаПравилУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ТаблицаПравилСсылка" id="30">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>7</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>false</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ТаблицаПравилСсылкаКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ТаблицаПравилСсылкаExtendedTooltip" id="51"/>
+						</InputField>
+						<InputField name="ТаблицаПравилПредставлениеУсловия" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Условие</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Height>2</Height>
+							<ContextMenu name="ТаблицаПравилПредставлениеУсловияКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ТаблицаПравилПредставлениеУсловияExtendedTooltip" id="52"/>
+						</InputField>
+						<InputField name="ТаблицаПравилКомментарий" id="34">
+							<EditMode>EnterOnInput</EditMode>
+							<Width>19</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ТаблицаПравилКомментарийКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ТаблицаПравилКомментарийExtendedTooltip" id="53"/>
+						</InputField>
+						<InputField name="ТаблицаПравилОтветственный" id="36">
+							<EditMode>EnterOnInput</EditMode>
+							<Width>3</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ТаблицаПравилОтветственныйКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ТаблицаПравилОтветственныйExtendedTooltip" id="54"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1000001">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТомаХраненияФайлов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="s3_РазрешеноИзменениеНастроекХранилищаS3" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешено изменение настроек хранилища s3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<BaseForm version="2.12">
+		<Width>60</Width>
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<ChildItems>
+				<Button name="ФормаПроверитьЦелостностьТома" id="84">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаПроверитьЦелостностьТомаРасширеннаяПодсказка" id="85"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ГруппаКодИНаименование" id="12">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Наименование тома</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа код и наименование</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Vertical</Group>
+				<Representation>NormalSeparation</Representation>
+				<ExtendedTooltip name="ГруппаКодИНаименованиеExtendedTooltip" id="38"/>
+				<ChildItems>
+					<InputField name="Наименование" id="3">
+						<DataPath>Объект.Description</DataPath>
+						<TitleLocation>None</TitleLocation>
+						<EditMode>EnterOnInput</EditMode>
+						<HorizontalStretch>true</HorizontalStretch>
+						<InputHint>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Наименование</v8:content>
+							</v8:item>
+						</InputHint>
+						<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+						<ExtendedTooltip name="НаименованиеExtendedTooltip" id="39"/>
+					</InputField>
+					<InputField name="Родитель" id="25">
+						<DataPath>Объект.Parent</DataPath>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Входит в группу</v8:content>
+							</v8:item>
+						</Title>
+						<MaxWidth>30</MaxWidth>
+						<ContextMenu name="РодительКонтекстноеМеню" id="26"/>
+						<ExtendedTooltip name="РодительExtendedTooltip" id="41"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаПути" id="11">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Полный путь</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа пути</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Vertical</Group>
+				<Representation>NormalSeparation</Representation>
+				<ExtendedTooltip name="ГруппаПутиExtendedTooltip" id="42"/>
+				<ChildItems>
+					<UsualGroup name="ПутьWindowsСИконкой" id="68">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Путь windows с иконкой</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Путь windows с иконкой</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Horizontal</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ПутьWindowsСИконкойРасширеннаяПодсказка" id="69"/>
+						<ChildItems>
+							<PictureDecoration name="ИконкаWindows" id="70">
+								<Width>2</Width>
+								<Height>1</Height>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Иконка windows</v8:content>
+									</v8:item>
+								</Title>
+								<FileDragMode>AsFile</FileDragMode>
+								<ContextMenu name="ИконкаWindowsКонтекстноеМеню" id="71"/>
+								<ExtendedTooltip name="ИконкаWindowsРасширеннаяПодсказка" id="72"/>
+							</PictureDecoration>
+							<LabelDecoration name="ДекорацияWindows" id="73">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Для сервера 1С:Предприятия под управлением Microsoft Windows, (вида "\\servername\resource")</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="ДекорацияWindowsКонтекстноеМеню" id="74"/>
+								<ExtendedTooltip name="ДекорацияWindowsРасширеннаяПодсказка" id="75"/>
+							</LabelDecoration>
+						</ChildItems>
+					</UsualGroup>
+					<InputField name="ПолныйПутьWindows" id="5">
+						<DataPath>Объект.ПолныйПутьWindows</DataPath>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Для сервера 1С:Предприятия под управлением Microsoft Windows, (вида "\\servername\resource")</v8:content>
+							</v8:item>
+						</Title>
+						<TitleLocation>None</TitleLocation>
+						<WarningOnEdit>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Меняя путь тома, вы потеряете возможность доступа к уже созданным на этом томе файлам</v8:content>
+							</v8:item>
+						</WarningOnEdit>
+						<EditMode>EnterOnInput</EditMode>
+						<ChoiceButton>false</ChoiceButton>
+						<ContextMenu name="ПолныйПутьWindowsКонтекстноеМеню" id="6"/>
+						<ExtendedTooltip name="ПолныйПутьWindowsExtendedTooltip" id="43"/>
+					</InputField>
+					<UsualGroup name="ПутьLinuxСИконкой" id="76">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Путь linux с иконкой</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Путь windows с иконкой</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Horizontal</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ПутьLinuxСИконкойРасширеннаяПодсказка" id="77"/>
+						<ChildItems>
+							<PictureDecoration name="ИконкаLinux" id="78">
+								<Width>2</Width>
+								<Height>1</Height>
+								<FileDragMode>AsFile</FileDragMode>
+								<ContextMenu name="ИконкаLinuxКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="ИконкаLinuxРасширеннаяПодсказка" id="80"/>
+							</PictureDecoration>
+							<LabelDecoration name="ДекорацияLinux" id="81">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Для сервера 1С:Предприятия под управлением Linux</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="ДекорацияLinuxКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="ДекорацияLinuxРасширеннаяПодсказка" id="83"/>
+							</LabelDecoration>
+						</ChildItems>
+					</UsualGroup>
+					<InputField name="ПолныйПутьLinux" id="23">
+						<DataPath>Объект.ПолныйПутьLinux</DataPath>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Для сервера 1С:Предприятия под управлением Linux</v8:content>
+							</v8:item>
+						</Title>
+						<TitleLocation>None</TitleLocation>
+						<ContextMenu name="ПолныйПутьLinuxКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="ПолныйПутьLinuxExtendedTooltip" id="44"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаДополнительно" id="64">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дополнительно</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа дополнительно</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Vertical</Group>
+				<Representation>NormalSeparation</Representation>
+				<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="65"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаМаксимальныйРазмер" id="19">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа максимальный размер</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа максимальный размер</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Horizontal</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаМаксимальныйРазмерExtendedTooltip" id="46"/>
+						<ChildItems>
+							<InputField name="МаксимальныйРазмер" id="17">
+								<DataPath>Объект.МаксимальныйРазмер</DataPath>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Максимальный размер, Мб</v8:content>
+									</v8:item>
+								</Title>
+								<Width>12</Width>
+								<SpinButton>true</SpinButton>
+								<ContextMenu name="МаксимальныйРазмерКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="МаксимальныйРазмерExtendedTooltip" id="47"/>
+							</InputField>
+							<InputField name="Порядок" id="7">
+								<DataPath>Объект.ПорядокЗаполнения</DataPath>
+								<EditMode>EnterOnInput</EditMode>
+								<SpinButton>true</SpinButton>
+								<ContextMenu name="ПорядокКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="ПорядокExtendedTooltip" id="45"/>
+							</InputField>
+						</ChildItems>
+					</UsualGroup>
+					<UsualGroup name="ГруппаТекущий" id="86">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа текущий</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа текущий</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>AlwaysHorizontal</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаТекущийРасширеннаяПодсказка" id="87"/>
+						<ChildItems>
+							<InputField name="ТекущийРазмер" id="20">
+								<ReadOnly>true</ReadOnly>
+								<ContextMenu name="ТекущийРазмерКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ТекущийРазмерExtendedTooltip" id="48"/>
+							</InputField>
+							<Button name="ОбновитьРазмер" id="88">
+								<Type>UsualButton</Type>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="ОбновитьРазмерРасширеннаяПодсказка" id="89"/>
+							</Button>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+			<InputField name="Комментарий" id="13">
+				<DataPath>Объект.Комментарий</DataPath>
+				<TitleLocation>None</TitleLocation>
+				<Height>2</Height>
+				<VerticalStretch>false</VerticalStretch>
+				<InputHint>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Комментарий</v8:content>
+					</v8:item>
+				</InputHint>
+				<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="КомментарийExtendedTooltip" id="49"/>
+			</InputField>
+			<UsualGroup name="ГруппаПравила" id="66">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Правила</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа правила</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Vertical</Group>
+				<Representation>NormalSeparation</Representation>
+				<ExtendedTooltip name="ГруппаПравилаРасширеннаяПодсказка" id="67"/>
+				<ChildItems>
+					<Table name="ТаблицаПравил" id="27">
+						<Representation>List</Representation>
+						<ChangeRowSet>false</ChangeRowSet>
+						<ChangeRowOrder>false</ChangeRowOrder>
+						<HeightInTableRows>1</HeightInTableRows>
+						<RowSelectionMode>Row</RowSelectionMode>
+						<AutoInsertNewRow>true</AutoInsertNewRow>
+						<EnableStartDrag>true</EnableStartDrag>
+						<EnableDrag>true</EnableDrag>
+						<FileDragMode>AsFile</FileDragMode>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Правила</v8:content>
+							</v8:item>
+						</Title>
+						<SearchStringLocation>None</SearchStringLocation>
+						<ViewStatusLocation>None</ViewStatusLocation>
+						<SearchControlLocation>None</SearchControlLocation>
+						<RowFilter xsi:nil="true"/>
+						<ContextMenu name="ТаблицаПравилКонтекстноеМеню" id="28"/>
+						<AutoCommandBar name="ТаблицаПравилКоманднаяПанель" id="29">
+							<Autofill>false</Autofill>
+						</AutoCommandBar>
+						<ExtendedTooltip name="ТаблицаПравилExtendedTooltip" id="50"/>
+						<SearchStringAddition name="ТаблицаПравилСтрокаПоиска" id="55">
+							<AdditionSource>
+								<Item>ТаблицаПравил</Item>
+								<Type>SearchStringRepresentation</Type>
+							</AdditionSource>
+							<ContextMenu name="ТаблицаПравилСтрокаПоискаКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ТаблицаПравилСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+						</SearchStringAddition>
+						<ViewStatusAddition name="ТаблицаПравилСостояниеПросмотра" id="58">
+							<AdditionSource>
+								<Item>ТаблицаПравил</Item>
+								<Type>ViewStatusRepresentation</Type>
+							</AdditionSource>
+							<ContextMenu name="ТаблицаПравилСостояниеПросмотраКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ТаблицаПравилСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+						</ViewStatusAddition>
+						<SearchControlAddition name="ТаблицаПравилУправлениеПоиском" id="61">
+							<AdditionSource>
+								<Item>ТаблицаПравил</Item>
+								<Type>SearchControl</Type>
+							</AdditionSource>
+							<ContextMenu name="ТаблицаПравилУправлениеПоискомКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ТаблицаПравилУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+						</SearchControlAddition>
+						<ChildItems>
+							<InputField name="ТаблицаПравилСсылка" id="30">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Наименование</v8:content>
+									</v8:item>
+								</Title>
+								<EditMode>EnterOnInput</EditMode>
+								<Width>7</Width>
+								<Height>2</Height>
+								<HorizontalStretch>false</HorizontalStretch>
+								<ChoiceButton>false</ChoiceButton>
+								<OpenButton>true</OpenButton>
+								<TextEdit>false</TextEdit>
+								<ContextMenu name="ТаблицаПравилСсылкаКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="ТаблицаПравилСсылкаExtendedTooltip" id="51"/>
+							</InputField>
+							<InputField name="ТаблицаПравилПредставлениеУсловия" id="32">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Условие</v8:content>
+									</v8:item>
+								</Title>
+								<EditMode>EnterOnInput</EditMode>
+								<Height>2</Height>
+								<ContextMenu name="ТаблицаПравилПредставлениеУсловияКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="ТаблицаПравилПредставлениеУсловияExtendedTooltip" id="52"/>
+							</InputField>
+							<InputField name="ТаблицаПравилКомментарий" id="34">
+								<EditMode>EnterOnInput</EditMode>
+								<Width>19</Width>
+								<Height>2</Height>
+								<HorizontalStretch>false</HorizontalStretch>
+								<ContextMenu name="ТаблицаПравилКомментарийКонтекстноеМеню" id="35"/>
+								<ExtendedTooltip name="ТаблицаПравилКомментарийExtendedTooltip" id="53"/>
+							</InputField>
+							<InputField name="ТаблицаПравилОтветственный" id="36">
+								<EditMode>EnterOnInput</EditMode>
+								<Width>3</Width>
+								<Height>2</Height>
+								<HorizontalStretch>false</HorizontalStretch>
+								<ContextMenu name="ТаблицаПравилОтветственныйКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="ТаблицаПравилОтветственныйExtendedTooltip" id="54"/>
+							</InputField>
+						</ChildItems>
+					</Table>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes>
+			<Attribute name="Объект" id="1000001">
+				<Type>
+					<v8:Type>cfg:CatalogObject.ТомаХраненияФайлов</v8:Type>
+				</Type>
+				<MainAttribute>true</MainAttribute>
+				<SavedData>true</SavedData>
+			</Attribute>
+		</Attributes>
+	</BaseForm>
+</Form>
