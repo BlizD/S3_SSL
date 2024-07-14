@@ -27,9 +27,6 @@
 ## Как настроить хранение в томах на s3
 
 Открываем «Настройка и администрирование» - «Настройка программы»
-
-![alt text](https://github.com/BlizD/S3_SSL/blob/main/screen/image-1.png)
-
 Далее «Работа с файлами»
 
 ![alt text](https://github.com/BlizD/S3_SSL/blob/main/screen/image-12.png)
