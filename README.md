@@ -1,4 +1,6 @@
-[![Github Releases](https://img.shields.io/github/downloads/BlizD/S3_SSL/latest/total.svg)]()
+[![Stars](https://img.shields.io/github/stars/BlizD/S3_SSL.svg?label=Github%20%E2%98%85&a)](https://github.com/BlizD/S3_SSL/stargazers)
+[![Github All Releases](https://img.shields.io/github/downloads/BlizD/S3_SSL/total.svg)]() 
+[![OpenYellow](https://img.shields.io/endpoint?url=https://openyellow.org/data/badges/2/387114027.json)](https://openyellow.org/grid?data=top&repo=387114027)
 
 # S3_SSL
 
