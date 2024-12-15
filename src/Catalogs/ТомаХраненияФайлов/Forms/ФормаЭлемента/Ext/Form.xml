@@ -112,7 +112,7 @@
 					<v8:content>S3 страницы настроек</v8:content>
 				</v8:item>
 			</ToolTip>
-			<PagesRepresentation>None</PagesRepresentation>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="s3_СтраницыНастроекРасширеннаяПодсказка" id="120"/>
 			<ChildItems>
 				<Page name="s3_Страница_СетеваяПапка" id="121">
