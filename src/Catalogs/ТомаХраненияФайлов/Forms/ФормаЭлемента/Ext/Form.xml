@@ -30,6 +30,7 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="ГруппаКодИНаименованиеExtendedTooltip" id="38"/>
 			<ChildItems>
@@ -143,6 +144,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>NormalSeparation</Representation>
 							<ExtendedTooltip name="ГруппаПутиExtendedTooltip" id="42"/>
 							<ChildItems>
@@ -160,6 +162,7 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ПутьWindowsСИконкойРасширеннаяПодсказка" id="69"/>
@@ -223,6 +226,7 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ПутьLinuxСИконкойРасширеннаяПодсказка" id="77"/>
@@ -312,6 +316,7 @@
 									<v8:content>S3 группа настройки объектное s3</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="s3_ГруппаНастройкиОбъектноеS3РасширеннаяПодсказка" id="94"/>
 							<ChildItems>
 								<InputField name="s3_АдресХранилища" id="110">
@@ -376,6 +381,7 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="65"/>
 			<ChildItems>
@@ -393,6 +399,7 @@
 						</v8:item>
 					</ToolTip>
 					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаМаксимальныйРазмерExtendedTooltip" id="46"/>
@@ -433,6 +440,7 @@
 						</v8:item>
 					</ToolTip>
 					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаТекущийРасширеннаяПодсказка" id="87"/>
@@ -479,6 +487,7 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="ГруппаПравилаРасширеннаяПодсказка" id="67"/>
 			<ChildItems>
@@ -630,6 +639,7 @@
 					</v8:item>
 				</ToolTip>
 				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
 				<Representation>NormalSeparation</Representation>
 				<ExtendedTooltip name="ГруппаКодИНаименованиеExtendedTooltip" id="38"/>
 				<ChildItems>
@@ -675,6 +685,7 @@
 					</v8:item>
 				</ToolTip>
 				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
 				<Representation>NormalSeparation</Representation>
 				<ExtendedTooltip name="ГруппаПутиExtendedTooltip" id="42"/>
 				<ChildItems>
@@ -692,6 +703,7 @@
 							</v8:item>
 						</ToolTip>
 						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ПутьWindowsСИконкойРасширеннаяПодсказка" id="69"/>
@@ -755,6 +767,7 @@
 							</v8:item>
 						</ToolTip>
 						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ПутьLinuxСИконкойРасширеннаяПодсказка" id="77"/>
@@ -806,6 +819,7 @@
 					</v8:item>
 				</ToolTip>
 				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
 				<Representation>NormalSeparation</Representation>
 				<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="65"/>
 				<ChildItems>
@@ -823,6 +837,7 @@
 							</v8:item>
 						</ToolTip>
 						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаМаксимальныйРазмерExtendedTooltip" id="46"/>
@@ -863,6 +878,7 @@
 							</v8:item>
 						</ToolTip>
 						<Group>AlwaysHorizontal</Group>
+						<Behavior>Usual</Behavior>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаТекущийРасширеннаяПодсказка" id="87"/>
@@ -909,6 +925,7 @@
 					</v8:item>
 				</ToolTip>
 				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
 				<Representation>NormalSeparation</Representation>
 				<ExtendedTooltip name="ГруппаПравилаРасширеннаяПодсказка" id="67"/>
 				<ChildItems>
