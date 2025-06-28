@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<Width>60</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
@@ -30,7 +30,6 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
-			<Behavior>Usual</Behavior>
 			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="ГруппаКодИНаименованиеExtendedTooltip" id="38"/>
 			<ChildItems>
@@ -144,7 +143,6 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>NormalSeparation</Representation>
 							<ExtendedTooltip name="ГруппаПутиExtendedTooltip" id="42"/>
 							<ChildItems>
@@ -162,7 +160,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Horizontal</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ПутьWindowsСИконкойРасширеннаяПодсказка" id="69"/>
@@ -226,7 +223,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Horizontal</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ПутьLinuxСИконкойРасширеннаяПодсказка" id="77"/>
@@ -316,7 +312,6 @@
 									<v8:content>S3 группа настройки объектное s3</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="s3_ГруппаНастройкиОбъектноеS3РасширеннаяПодсказка" id="94"/>
 							<ChildItems>
 								<InputField name="s3_АдресХранилища" id="110">
@@ -381,7 +376,6 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
-			<Behavior>Usual</Behavior>
 			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="65"/>
 			<ChildItems>
@@ -399,7 +393,6 @@
 						</v8:item>
 					</ToolTip>
 					<Group>Horizontal</Group>
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаМаксимальныйРазмерExtendedTooltip" id="46"/>
@@ -440,7 +433,6 @@
 						</v8:item>
 					</ToolTip>
 					<Group>AlwaysHorizontal</Group>
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаТекущийРасширеннаяПодсказка" id="87"/>
@@ -487,7 +479,6 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
-			<Behavior>Usual</Behavior>
 			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="ГруппаПравилаРасширеннаяПодсказка" id="67"/>
 			<ChildItems>
@@ -611,7 +602,7 @@
 			</Type>
 		</Attribute>
 	</Attributes>
-	<BaseForm version="2.16">
+	<BaseForm version="2.18">
 		<Width>60</Width>
 		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 		<UseForFoldersAndItems>Items</UseForFoldersAndItems>
@@ -639,7 +630,6 @@
 					</v8:item>
 				</ToolTip>
 				<Group>Vertical</Group>
-				<Behavior>Usual</Behavior>
 				<Representation>NormalSeparation</Representation>
 				<ExtendedTooltip name="ГруппаКодИНаименованиеExtendedTooltip" id="38"/>
 				<ChildItems>
@@ -685,7 +675,6 @@
 					</v8:item>
 				</ToolTip>
 				<Group>Vertical</Group>
-				<Behavior>Usual</Behavior>
 				<Representation>NormalSeparation</Representation>
 				<ExtendedTooltip name="ГруппаПутиExtendedTooltip" id="42"/>
 				<ChildItems>
@@ -703,7 +692,6 @@
 							</v8:item>
 						</ToolTip>
 						<Group>Horizontal</Group>
-						<Behavior>Usual</Behavior>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ПутьWindowsСИконкойРасширеннаяПодсказка" id="69"/>
@@ -767,7 +755,6 @@
 							</v8:item>
 						</ToolTip>
 						<Group>Horizontal</Group>
-						<Behavior>Usual</Behavior>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ПутьLinuxСИконкойРасширеннаяПодсказка" id="77"/>
@@ -819,7 +806,6 @@
 					</v8:item>
 				</ToolTip>
 				<Group>Vertical</Group>
-				<Behavior>Usual</Behavior>
 				<Representation>NormalSeparation</Representation>
 				<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="65"/>
 				<ChildItems>
@@ -837,7 +823,6 @@
 							</v8:item>
 						</ToolTip>
 						<Group>Horizontal</Group>
-						<Behavior>Usual</Behavior>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаМаксимальныйРазмерExtendedTooltip" id="46"/>
@@ -878,7 +863,6 @@
 							</v8:item>
 						</ToolTip>
 						<Group>AlwaysHorizontal</Group>
-						<Behavior>Usual</Behavior>
 						<Representation>None</Representation>
 						<ShowTitle>false</ShowTitle>
 						<ExtendedTooltip name="ГруппаТекущийРасширеннаяПодсказка" id="87"/>
@@ -925,7 +909,6 @@
 					</v8:item>
 				</ToolTip>
 				<Group>Vertical</Group>
-				<Behavior>Usual</Behavior>
 				<Representation>NormalSeparation</Representation>
 				<ExtendedTooltip name="ГруппаПравилаРасширеннаяПодсказка" id="67"/>
 				<ChildItems>
