@@ -8,6 +8,10 @@
 
 * [Скачать последний релиз 2025.06.28.01](https://github.com/BlizD/S3_SSL/releases/download/2025.06.28.01/s3_ssl_2025.06.28.01.cfe)
 
+**Статьи в которых есть упоминание данного проекта**
+
+[Вконтакте: Как мы учили «1С: Предприятие» работать с объектным хранилищем S3: предпосылки, алгоритм, результат](https://habr.com/ru/companies/vk/articles/892824/)
+
 # S3_SSL
 
 Расширение для БСП для хранения файлов на s3 (minio, Amazon S3, Mail.Ru Cloud и т.п.)
@@ -22,7 +26,6 @@
 
 Спасибо malikov-pro за публикации [external-storage-1c-ssl](https://github.com/malikov-pro/external-storage-1c-ssl)
 [Хранение файлов томов БСП в хранилище с OpenStack API](https://infostart.ru/public/1276986/) @malikov-pro
-
 
 ## Спасибо всем разработчикам за вклад в проект ## 
 
