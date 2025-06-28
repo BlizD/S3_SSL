@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.s3_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor>https://github.com/BlizD/</Vendor>
-			<Version>2024.12.15.01</Version>
+			<Version>2025.06.28.01</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
