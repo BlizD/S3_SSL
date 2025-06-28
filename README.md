@@ -1,6 +1,7 @@
 [![Stars](https://img.shields.io/github/stars/BlizD/S3_SSL.svg?label=Github%20%E2%98%85&a)](https://github.com/BlizD/S3_SSL/stargazers)
 [![Release](https://img.shields.io/github/tag/BlizD/S3_SSL.svg?label=Last%20release&a)](https://github.com/BlizD/S3_SSL/releases)
 [![Github All Releases](https://img.shields.io/github/downloads/BlizD/S3_SSL/total.svg)]() 
+[![Github Releases](https://img.shields.io/github/downloads/S3_SSL/Tasks/latest/total.svg)]()
 [![OpenYellow](https://img.shields.io/endpoint?url=https://openyellow.org/data/badges/2/387114027.json)](https://openyellow.org/grid?data=top&repo=387114027)
 
 ## Скачать последний релиз ## 
